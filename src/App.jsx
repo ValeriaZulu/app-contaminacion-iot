@@ -1,10 +1,7 @@
+import Dashboard from "./pages/Dashboard";
+
 function App() {
-  return (
-    <div>
-      <h1>Dashboard de Ocupación Espectral</h1>
-      <p>ANE - Análisis de ocupación del espectro en Medellín</p>
-    </div>
-  )
+  return <Dashboard />;
 }
 
-export default App
+export default App;
