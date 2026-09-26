@@ -6,6 +6,7 @@ function Dashboard() {
     const [mediciones, setMediciones] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
+    const [canalSeleccionado, setCanalSeleccionado] = useState("A");
 
     useEffect(() => {
         cargarMediciones()
@@ -34,7 +35,23 @@ function Dashboard() {
 
             <p>Mediciones cargadas: {mediciones.length}</p>
 
-            <MeasurementMap mediciones={mediciones} />
+            <div>
+                <h2>Ocupación del espectro por canal</h2>
+
+                {["A", "B", "C", "D"].map((canal) => (
+                    <button
+                        key={canal}
+                        onClick={() => setCanalSeleccionado(canal)}
+                    >
+                        Canal {canal}
+                    </button>
+                ))}
+            </div>
+
+            <MeasurementMap
+                mediciones={mediciones}
+                canalSeleccionado={canalSeleccionado}
+            />
         </main>
     );
 }

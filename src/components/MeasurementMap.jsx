@@ -1,8 +1,20 @@
-import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
+import {
+    MapContainer,
+    TileLayer,
+    CircleMarker,
+    Popup,
+    Polyline,
+} from "react-leaflet";
+import HeatMap from "./HeatMap";
 
 const CENTRO_MEDELLIN = [6.2442, -75.5812];
 
-function MeasurementMap({ mediciones }) {
+function MeasurementMap({ mediciones, canalSeleccionado }) {
+    const coordenadasRuta = mediciones.map((medicion) => [
+        medicion.latitud,
+        medicion.longitud,
+    ]);
+
     return (
         <MapContainer
             center={CENTRO_MEDELLIN}
@@ -10,9 +22,15 @@ function MeasurementMap({ mediciones }) {
             style={{ height: "600px", width: "100%" }}
         >
             <TileLayer
-                attribution='&copy; OpenStreetMap contributors'
+                attribution="&copy; OpenStreetMap contributors"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            <HeatMap
+                mediciones={mediciones}
+                canal={canalSeleccionado}
+            />
+
+            <Polyline positions={coordenadasRuta} />
 
             {mediciones.map((medicion) => (
                 <CircleMarker
