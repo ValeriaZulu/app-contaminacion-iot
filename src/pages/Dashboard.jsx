@@ -7,6 +7,7 @@ function Dashboard() {
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
     const [canalSeleccionado, setCanalSeleccionado] = useState("A");
+    const [tipoHeatmap, setTipoHeatmap] = useState("canal");
 
     useEffect(() => {
         cargarMediciones()
@@ -36,21 +37,36 @@ function Dashboard() {
             <p>Mediciones cargadas: {mediciones.length}</p>
 
             <div>
-                <h2>Ocupación del espectro por canal</h2>
+                <h2>Variable del mapa</h2>
 
-                {["A", "B", "C", "D"].map((canal) => (
-                    <button
-                        key={canal}
-                        onClick={() => setCanalSeleccionado(canal)}
-                    >
-                        Canal {canal}
-                    </button>
-                ))}
+                <button onClick={() => setTipoHeatmap("canal")}>
+                    Ocupación por canal
+                </button>
+
+                <button onClick={() => setTipoHeatmap("temperatura")}>
+                    Temperatura
+                </button>
             </div>
+
+            {tipoHeatmap === "canal" && (
+                <div>
+                    <h3>Canal seleccionado</h3>
+
+                    {["A", "B", "C", "D"].map((canal) => (
+                        <button
+                            key={canal}
+                            onClick={() => setCanalSeleccionado(canal)}
+                        >
+                            Canal {canal}
+                        </button>
+                    ))}
+                </div>
+            )}
 
             <MeasurementMap
                 mediciones={mediciones}
                 canalSeleccionado={canalSeleccionado}
+                tipoHeatmap={tipoHeatmap}
             />
         </main>
     );

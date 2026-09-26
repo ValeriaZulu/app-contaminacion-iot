@@ -9,7 +9,7 @@ import HeatMap from "./HeatMap";
 
 const CENTRO_MEDELLIN = [6.2442, -75.5812];
 
-function MeasurementMap({ mediciones, canalSeleccionado }) {
+function MeasurementMap({ mediciones, canalSeleccionado, tipoHeatmap, }) {
     const coordenadasRuta = mediciones.map((medicion) => [
         medicion.latitud,
         medicion.longitud,
@@ -28,6 +28,7 @@ function MeasurementMap({ mediciones, canalSeleccionado }) {
             <HeatMap
                 mediciones={mediciones}
                 canal={canalSeleccionado}
+                tipo={tipoHeatmap}
             />
 
             <Polyline positions={coordenadasRuta} />

@@ -29,12 +29,35 @@ function HeatLayer({ puntos }) {
     return null;
 }
 
-function HeatMap({ mediciones, canal }) {
-    const puntos = mediciones.map((medicion) => [
-        medicion.latitud,
-        medicion.longitud,
-        medicion[`ocupacion_${canal}`] / 100,
-    ]);
+function HeatMap({ mediciones, canal, tipo }) {
+    let puntos;
+
+    if (tipo === "temperatura") {
+        const temperaturas = mediciones.map(
+            (medicion) => medicion.temperatura
+        );
+
+        const temperaturaMin = Math.min(...temperaturas);
+        const temperaturaMax = Math.max(...temperaturas);
+
+        puntos = mediciones.map((medicion) => {
+            const intensidad =
+                (medicion.temperatura - temperaturaMin) /
+                (temperaturaMax - temperaturaMin);
+
+            return [
+                medicion.latitud,
+                medicion.longitud,
+                intensidad,
+            ];
+        });
+    } else {
+        puntos = mediciones.map((medicion) => [
+            medicion.latitud,
+            medicion.longitud,
+            medicion[`ocupacion_${canal}`] / 100,
+        ]);
+    }
 
     return <HeatLayer puntos={puntos} />;
 }
