@@ -16,60 +16,87 @@ function MeasurementMap({ mediciones, canalSeleccionado, tipoHeatmap, }) {
     ]);
 
     return (
-        <MapContainer
-            center={CENTRO_MEDELLIN}
-            zoom={12}
-            style={{ height: "600px", width: "100%" }}
-        >
-            <TileLayer
-                attribution="&copy; OpenStreetMap contributors"
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <HeatMap
-                mediciones={mediciones}
-                canal={canalSeleccionado}
-                tipo={tipoHeatmap}
-            />
+        <section className="map-container">
+            <MapContainer
+                center={CENTRO_MEDELLIN}
+                zoom={12}
+                style={{ height: "600px", width: "100%" }}
+            >
+                <TileLayer
+                    attribution="&copy; OpenStreetMap contributors"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
 
-            <Polyline positions={coordenadasRuta} />
+                <HeatMap
+                    mediciones={mediciones}
+                    canal={canalSeleccionado}
+                    tipo={tipoHeatmap}
+                />
 
-            {mediciones.map((medicion) => (
-                <CircleMarker
-                    key={medicion.medicion}
-                    center={[medicion.latitud, medicion.longitud]}
-                    radius={7}
-                >
-                    <Popup>
-                        <strong>Medición {medicion.medicion}</strong>
+                <Polyline positions={coordenadasRuta} />
 
-                        <br />
-                        Temperatura: {medicion.temperatura.toFixed(2)} °C
+                {mediciones.map((medicion) => (
+                    <CircleMarker
+                        key={medicion.medicion}
+                        center={[medicion.latitud, medicion.longitud]}
+                        radius={7}
+                    >
+                        <Popup>
+                            <strong>Medición {medicion.medicion}</strong>
 
-                        <br />
-                        Altura: {medicion.altura.toFixed(2)} m
+                            <br />
 
-                        <br />
-                        Error de distancia: {medicion.error_distancia.toFixed(2)} m
+                            Temperatura:{" "}
+                            {medicion.temperatura.toFixed(2)} °C
 
-                        <hr />
+                            <br />
 
-                        <strong>Ocupación por canal</strong>
+                            Altura:{" "}
+                            {medicion.altura.toFixed(2)} m
 
-                        <br />
-                        Canal A: {medicion.ocupacion_A.toFixed(2)} %
+                            <br />
 
-                        <br />
-                        Canal B: {medicion.ocupacion_B.toFixed(2)} %
+                            Error de distancia:{" "}
+                            {medicion.error_distancia.toFixed(2)} m
 
-                        <br />
-                        Canal C: {medicion.ocupacion_C.toFixed(2)} %
+                            <hr />
 
-                        <br />
-                        Canal D: {medicion.ocupacion_D.toFixed(2)} %
-                    </Popup>
-                </CircleMarker>
-            ))}
-        </MapContainer>
+                            <strong>Ocupación por canal</strong>
+
+                            <br />
+                            Canal A: {medicion.ocupacion_A.toFixed(2)} %
+
+                            <br />
+                            Canal B: {medicion.ocupacion_B.toFixed(2)} %
+
+                            <br />
+                            Canal C: {medicion.ocupacion_C.toFixed(2)} %
+
+                            <br />
+                            Canal D: {medicion.ocupacion_D.toFixed(2)} %
+
+                            <hr />
+
+                            <strong>Frecuencia contaminada</strong>
+
+                            <br />
+
+                            Frecuencia:{" "}
+                            {medicion.frecuencia_contaminada_representativa_MHz.toFixed(
+                                3
+                            )} MHz
+
+                            <br />
+
+                            Potencia:{" "}
+                            {medicion.potencia_frecuencia_contaminada_dBm.toFixed(
+                                2
+                            )} dBm
+                        </Popup>
+                    </CircleMarker>
+                ))}
+            </MapContainer>
+        </section>
     );
 }
 

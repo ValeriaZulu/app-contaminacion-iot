@@ -1,35 +1,50 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN GENERAL
+======================================== */
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f3f7;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f6f4f8;
+  color: #2f2340;
 }
 
-main {
-  padding: 24px;
+button {
+  font-family: inherit;
 }
 
-h1 {
-  margin-top: 0;
-}
 
-/* ================================
+/* ========================================
    HEADER
-================================ */
+======================================== */
 
 .dashboard-header {
-  background: linear-gradient(135deg, #24133f, #4b2675);
+  background: linear-gradient(135deg, #24133f 0%, #4b2675 100%);
   color: white;
   padding: 24px 32px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  box-shadow:
+    0 4px 18px rgba(50, 25, 75, 0.18);
 }
 
 .header-content {
   max-width: 1400px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,185 +58,454 @@ h1 {
 }
 
 .header-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 54px;
+  height: 54px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.14);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 27px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .header-brand h1 {
   margin: 0;
+
   font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .header-brand p {
   margin: 5px 0 0;
-  opacity: 0.8;
+
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .header-status {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
+
   padding: 9px 14px;
+
   border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.1);
+
   font-size: 13px;
 }
 
 .status-dot {
   width: 8px;
   height: 8px;
+
   border-radius: 50%;
+
   background: #7ee787;
+
+  box-shadow: 0 0 8px rgba(126, 231, 135, 0.7);
 }
 
 
-/* ================================
-   SUMMARY CARDS
-================================ */
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 30px 32px 50px;
+}
+
+
+/* ========================================
+   TARJETAS DE RESUMEN
+======================================== */
 
 .summary-grid {
-  max-width: 1400px;
-  margin: 28px auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
   gap: 18px;
+
+  margin: 0 0 30px;
 }
 
 .summary-card {
-  background: white;
-  border: 1px solid #e8e2ef;
+  background: #ffffff;
+
+  border: 1px solid #e9e3ef;
+
   border-radius: 16px;
+
   padding: 20px;
+
   display: flex;
   align-items: center;
+
   gap: 15px;
-  box-shadow: 0 3px 12px rgba(50, 30, 70, 0.06);
+
+  box-shadow:
+    0 4px 15px rgba(55, 30, 80, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(55, 30, 80, 0.09);
 }
 
 .summary-card-icon {
   width: 48px;
   height: 48px;
+
   flex-shrink: 0;
+
   border-radius: 13px;
+
   background: #f1eafa;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 22px;
 }
 
 .summary-label {
   margin: 0 0 5px;
-  color: #777;
+
+  color: #7b7285;
+
   font-size: 13px;
+  font-weight: 500;
 }
 
 .summary-card h2 {
   margin: 0;
+
   color: #2f1748;
+
   font-size: 24px;
+  line-height: 1.2;
 }
 
 .summary-card span {
-  color: #888;
+  display: block;
+
+  margin-top: 4px;
+
+  color: #918999;
+
   font-size: 12px;
 }
 
 
-/* ================================
-   ANALYSIS SELECTOR
-================================ */
+/* ========================================
+   SELECTOR DE ANÁLISIS
+======================================== */
 
 .analysis-section {
-  max-width: 1400px;
-  margin: 0 auto 24px;
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  margin-bottom: 14px;
 }
 
 .section-heading h2 {
   margin: 0;
+
   color: #2f1748;
+
   font-size: 21px;
+  font-weight: 700;
 }
 
 .section-heading p {
-  margin: 6px 0 16px;
-  color: #777;
+  margin: 6px 0 0;
+
+  color: #7b7285;
+
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .analysis-selector {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
   gap: 14px;
 }
 
 .analysis-option {
+  width: 100%;
+
   border: 1px solid #e4ddea;
-  background: white;
-  border-radius: 14px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
   padding: 16px;
+
   display: flex;
   align-items: center;
+
   gap: 14px;
+
   text-align: left;
+
   cursor: pointer;
-  transition: all 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .analysis-option:hover {
-  border-color: #8b5fbf;
+  border-color: #a47bc7;
+
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(70, 35, 100, 0.08);
+
+  box-shadow:
+    0 7px 18px rgba(90, 45, 125, 0.08);
 }
 
 .analysis-option.active {
-  border-color: #6f3fa3;
+  border-color: #7040a3;
+
   background: #f7f1fc;
-  box-shadow: 0 4px 14px rgba(111, 63, 163, 0.12);
+
+  box-shadow:
+    0 5px 16px rgba(111, 63, 163, 0.12);
 }
 
 .analysis-icon {
-  width: 43px;
-  height: 43px;
+  width: 44px;
+  height: 44px;
+
   flex-shrink: 0;
-  border-radius: 11px;
+
+  border-radius: 12px;
+
   background: #eee4f7;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 20px;
+}
+
+.analysis-option.active .analysis-icon {
+  background: #e4d2f3;
 }
 
 .analysis-text {
   display: flex;
   flex-direction: column;
+
   gap: 4px;
 }
 
 .analysis-text strong {
   color: #35184e;
+
   font-size: 14px;
+  font-weight: 650;
 }
 
 .analysis-text span {
-  color: #777;
+  color: #7c7483;
+
   font-size: 12px;
   line-height: 1.4;
 }
 
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* ========================================
+   SELECTOR DE CANALES
+======================================== */
 
-@media (max-width: 1000px) {
+.channel-selector {
+  background: #ffffff;
+
+  border: 1px solid #e7e0ed;
+
+  border-radius: 15px;
+
+  padding: 16px 18px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-shadow:
+    0 3px 12px rgba(55, 30, 80, 0.04);
+}
+
+.channel-selector h3 {
+  margin: 0 12px 0 0;
+
+  color: #3a2948;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.channel-selector button {
+  border: 1px solid #ded4e7;
+
+  background: #faf9fb;
+
+  color: #665b70;
+
+  padding: 8px 17px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.channel-selector button:hover {
+  border-color: #9d70c1;
+
+  color: #633592;
+
+  transform: translateY(-1px);
+}
+
+.channel-selector button.channel-active {
+  background: #7040a3;
+
+  border-color: #7040a3;
+
+  color: white;
+
+  box-shadow:
+    0 4px 10px rgba(112, 64, 163, 0.25);
+}
+
+
+/* ========================================
+   CONTENEDOR DEL MAPA
+======================================== */
+
+.map-container {
+  background: #ffffff;
+
+  border: 1px solid #e5deeb;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 20px rgba(55, 30, 80, 0.07);
+}
+
+
+/* ========================================
+   LEAFLET
+======================================== */
+
+.leaflet-container {
+  font-family: inherit;
+
+  background: #e9e5ec;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  box-shadow:
+    0 3px 12px rgba(40, 25, 50, 0.15) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #4a315e !important;
+
+  border: none !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}
+
+
+/* ========================================
+   POPUPS DEL MAPA
+======================================== */
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+
+  box-shadow:
+    0 7px 25px rgba(40, 25, 50, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px;
+
+  color: #45394e;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.leaflet-popup-content strong {
+  color: #32194a;
+}
+
+.leaflet-popup-content hr {
+  border: none;
+
+  border-top: 1px solid #eee7f1;
+
+  margin: 8px 0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
   .summary-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -231,17 +515,46 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 700px) {
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  main {
+    padding: 22px 16px 40px;
+  }
+
   .summary-grid {
     grid-template-columns: 1fr;
   }
 
-  .header-content {
-    align-items: flex-start;
-    flex-direction: column;
+  .channel-selector {
+    flex-wrap: wrap;
   }
 
-  .header-status {
-    align-self: flex-start;
+  .channel-selector h3 {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .header-brand h1 {
+    font-size: 20px;
+  }
+
+  .header-brand p {
+    font-size: 12px;
+  }
+
+  .summary-card {
+    padding: 16px;
   }
 }
