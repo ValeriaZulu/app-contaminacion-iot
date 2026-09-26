@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { cargarMediciones } from "../data/dataService";
+import MeasurementMap from "../components/MeasurementMap";
 
 function Dashboard() {
     const [mediciones, setMediciones] = useState([]);
@@ -28,11 +29,13 @@ function Dashboard() {
     }
 
     return (
-        <div>
+        <main>
             <h1>Monitoreo de Ocupación del Espectro</h1>
 
             <p>Mediciones cargadas: {mediciones.length}</p>
-        </div>
+
+            <MeasurementMap mediciones={mediciones} />
+        </main>
     );
 }
 
