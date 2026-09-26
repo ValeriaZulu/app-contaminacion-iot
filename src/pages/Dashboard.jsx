@@ -12,7 +12,7 @@ function Dashboard() {
     const [error, setError] = useState(null);
 
     const [canalSeleccionado, setCanalSeleccionado] = useState("A");
-    const [tipoHeatmap, setTipoHeatmap] = useState("canal");
+    const [tipoHeatmap, setTipoHeatmap] = useState("ubicaciones");
 
     useEffect(() => {
         cargarMediciones()

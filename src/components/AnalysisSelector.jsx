@@ -1,5 +1,17 @@
 const opciones = [
     {
+        id: "ubicaciones",
+        icono: "📍",
+        titulo: "Ubicaciones",
+        descripcion: "Visualiza dónde se realizaron las mediciones.",
+    },
+    {
+        id: "ruta",
+        icono: "🛣️",
+        titulo: "Ruta de mediciones",
+        descripcion: "Visualiza el recorrido de la estación móvil.",
+    },
+    {
         id: "canal",
         icono: "📶",
         titulo: "Ocupación por canal",
@@ -24,13 +36,12 @@ function AnalysisSelector({ tipoHeatmap, setTipoHeatmap }) {
         <section className="analysis-section">
 
             <div className="section-heading">
-                <div>
-                    <h2>Análisis espacial</h2>
-                    <p>
-                        Selecciona una variable para visualizar su
-                        comportamiento sobre el área de medición.
-                    </p>
-                </div>
+                <h2>Análisis espacial</h2>
+
+                <p>
+                    Selecciona una variable para visualizar su
+                    comportamiento sobre el área de medición.
+                </p>
             </div>
 
             <div className="analysis-selector">
@@ -47,6 +58,7 @@ function AnalysisSelector({ tipoHeatmap, setTipoHeatmap }) {
 
                         <div className="analysis-text">
                             <strong>{opcion.titulo}</strong>
+
                             <span>{opcion.descripcion}</span>
                         </div>
                     </button>
