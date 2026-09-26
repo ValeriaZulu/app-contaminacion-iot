@@ -235,9 +235,9 @@ plt.show()
 print(metadata[metadata['error_distancia'] == 17.3])
 
 # Visualización de los datos anterior y posterior para comparar metadata
-print(metadata.loc[6:8])
+print(metadata.loc[15:17])
 
-"""Aunque la variable error_distancia presenta un pico estadísticamente atípico de 17.3 en el índice 7, la inspección de las coordenadas confirma que no hubo pérdida de ubicación ni congelamiento de datos. La latitud y longitud registradas mantienen una progresión espacial coherente y contigua con el registro posterior (índice 8). Este aumento en el error de distancia podría indicar una disminución temporal en la precisión de la señal satelital, pero no constituye un dato corrupto, por lo que el registro se conserva intacto sin necesidad de aplicar métodos de imputación.
+"""Aunque la variable error_distancia presenta un pico estadísticamente atípico de 17.3, la inspección de las coordenadas confirma que no hubo pérdida de ubicación ni congelamiento de datos. La latitud y longitud registradas mantienen una progresión espacial coherente y contigua con el registro posterior (índice 17). Este aumento en el error de distancia podría indicar una disminución temporal en la precisión de la señal satelital, pero no constituye un dato corrupto, por lo que el registro se conserva intacto sin necesidad de aplicar métodos de imputación.
 
 # CORRECCIÓN E IMPUTACIÓN
 
@@ -253,21 +253,21 @@ metadata_imputada['longitud'] = metadata_imputada['longitud'].replace(0, np.nan)
 metadata_imputada['altura'] = metadata_imputada['altura'].replace(0, np.nan)
 
 # Mostrar el registro antes de interpolar
-print("Registro 32 antes de la imputación:")
-print(metadata_imputada.loc[32])
+print("Registro 7 antes de la imputación:")
+print(metadata_imputada.loc[7])
 
 # Interpolación lineal según el orden de las mediciones
 metadata_imputada['latitud'] = metadata_imputada['latitud'].interpolate(method='linear')
 metadata_imputada['longitud'] = metadata_imputada['longitud'].interpolate(method='linear')
 metadata_imputada['altura'] = metadata_imputada['altura'].interpolate(method='linear')
 
-print("Registro 32 después de la imputación:")
-print(metadata_imputada.loc[32])
+print("Registro 7 después de la imputación:")
+print(metadata_imputada.loc[7])
 
 # Comparar original vs. imputado
 comparacion = pd.DataFrame({
-    'Original': metadata.loc[32, ['longitud', 'latitud', 'altura']],
-    'Imputado': metadata_imputada.loc[32, ['longitud', 'latitud', 'altura']]
+    'Original': metadata.loc[7, ['longitud', 'latitud', 'altura']],
+    'Imputado': metadata_imputada.loc[7, ['longitud', 'latitud', 'altura']]
 })
 
 print("=== COMPARACIÓN DEL REGISTRO IMPUTADO ===")

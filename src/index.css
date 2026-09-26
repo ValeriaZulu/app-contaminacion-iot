@@ -1010,7 +1010,7 @@ main {
 
 
 .channel-d {
-  background: #f59e0b;
+  background: #22c55e;
 }
 
 .occupancy-item:has(.channel-c) {
@@ -1022,4 +1022,251 @@ main {
 
   background: #fff8f8;
   width: auto;
+}
+
+/* ========================================
+   LAYOUT MAPA + PANEL LATERAL
+======================================== */
+
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.map-container {
+  background: #ffffff;
+  border: 1px solid #e5deeb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(55, 30, 80, 0.07);
+}
+
+.map-info-panel {
+  background: #ffffff;
+  border: 1px solid #e5deeb;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(55, 30, 80, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-panel-header h3 {
+  margin: 0 0 8px 0;
+  color: #2f1748;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info-panel-header p {
+  margin: 0;
+  color: #7b7285;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-legend-card {
+  background: #fcfbfe;
+  border: 1px solid #ede8f2;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-color.normal {
+  background: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.legend-color.imputada {
+  background: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.legend-text strong {
+  color: #35184e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 950px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   PINES PERSONALIZADOS DEL MAPA
+======================================== */
+
+.custom-map-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-inner {
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #2563eb;
+}
+
+.pin-inicio .pin-inner {
+  border-color: #16a34a;
+  /* Verde inicio */
+}
+
+.pin-fin .pin-inner {
+  border-color: #dc2626;
+  /* Rojo fin */
+}
+
+/* ========================================
+   GRÁFICO DE RUTA EN EL PANEL LATERAL
+======================================== */
+
+.route-chart-container {
+  background: #faf8fc;
+  border: 1px solid #ede7f3;
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.chart-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #584869;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ========================================
+   ETIQUETAS DE ESTADO Y BARRA DE GRADIENTE
+======================================== */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.status-tag-green {
+  background: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+}
+
+.status-tag-red {
+  background: #fce8e6;
+  color: #c5221f;
+  border: 1px solid #fad2cf;
+}
+
+.status-tag-orange {
+  background: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fcd34d;
+}
+
+.channel-legend-card {
+  background: #ffffff;
+  border: 1px solid #ede7f3;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.channel-legend-card strong {
+  color: #35184e;
+  font-size: 13px;
+}
+
+.gradient-bar {
+  height: 12px;
+  width: 100%;
+  border-radius: 6px;
+  background: linear-gradient(to right, #2563eb 0%, #22c55e 25%, #facc15 50%, #f97316 75%, #dc2626 100%);
+}
+
+.gradient-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #7b7285;
+  margin-top: -4px;
+}
+
+.channel-legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.channel-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #4a3e56;
+}
+
+.color-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.color-box.blue {
+  background: #2563eb;
+}
+
+.color-box.yellow {
+  background: #facc15;
+}
+
+.color-box.red {
+  background: #dc2626;
+}
+
+.sub-text-info {
+  margin-top: 10px !important;
+  font-size: 12px !important;
+  color: #817789 !important;
+  font-style: italic;
 }
