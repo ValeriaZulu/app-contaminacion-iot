@@ -558,3 +558,468 @@ main {
     padding: 16px;
   }
 }
+
+/* ========================================
+   RESUMEN DEL ANÁLISIS
+======================================== */
+
+.summary-section {
+  margin-bottom: 32px;
+}
+
+.summary-dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 1.15fr);
+
+  gap: 18px;
+}
+
+
+.summary-chart-card {
+  background: #ffffff;
+
+  border: 1px solid #e5deeb;
+
+  border-radius: 17px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 4px 15px rgba(55, 30, 80, 0.05);
+}
+
+
+.chart-card-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+
+.chart-card-label {
+  display: block;
+
+  color: #806b91;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin-bottom: 4px;
+}
+
+
+.chart-card-header h3 {
+  margin: 0;
+
+  color: #32194a;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+.chart-card-value {
+  color: #7040a3;
+
+  background: #f1eafa;
+
+  border-radius: 10px;
+
+  padding: 7px 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.chart-card-value.secondary {
+  color: #7655a8;
+
+  background: #f4f0fa;
+}
+
+
+.chart-container {
+  width: 100%;
+
+  height: 280px;
+}
+
+
+.chart-card-description {
+  margin: 10px 0 0;
+
+  color: #817789;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   RESULTADOS DE LOS CANALES
+======================================== */
+
+.channel-results {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+
+.channel-result {
+  background: #f8f6fa;
+
+  border-radius: 9px;
+
+  padding: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  text-align: center;
+}
+
+
+.channel-result span {
+  color: #817789;
+
+  font-size: 11px;
+}
+
+
+.channel-result strong {
+  color: #3a2050;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+
+  .summary-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .channel-results {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .chart-card-header {
+    flex-direction: column;
+  }
+
+}
+
+/* ========================================
+   NAVEGACIÓN DEL DASHBOARD
+======================================== */
+
+.dashboard-tabs {
+  display: inline-flex;
+
+  margin-bottom: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd5e5;
+
+  border-radius: 11px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 10px rgba(55, 30, 80, 0.04);
+}
+
+
+.dashboard-tab {
+  min-width: 125px;
+
+  padding: 11px 22px;
+
+  border: none;
+
+  border-right: 1px solid #e2dce7;
+
+  background: #ffffff;
+
+  color: #71677b;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.dashboard-tab:last-child {
+  border-right: none;
+}
+
+
+.dashboard-tab:hover {
+  background: #f7f3fa;
+
+  color: #5d347f;
+}
+
+
+.dashboard-tab.active {
+  background: #32194a;
+
+  color: #ffffff;
+}
+
+
+.dashboard-view {
+  animation: dashboardFadeIn 0.2s ease;
+}
+
+
+@keyframes dashboardFadeIn {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   CARGA Y ERROR
+======================================== */
+
+.loading-screen,
+.error-screen {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #6e6378;
+}
+
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #e6dced;
+
+  border-top-color: #7040a3;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .dashboard-tabs {
+    width: 100%;
+  }
+
+  .dashboard-tab {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 11px 10px;
+  }
+
+}
+
+/* ========================================
+   BARRAS DE OCUPACIÓN POR CANAL
+======================================== */
+
+.channel-occupancy {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+
+  padding: 12px 0 4px;
+}
+
+
+.occupancy-item {
+  width: 100%;
+}
+
+
+.occupancy-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 7px;
+}
+
+
+.occupancy-header>div {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+}
+
+
+.occupancy-header strong {
+  color: #3a2948;
+
+  font-size: 14px;
+}
+
+
+.occupancy-header span {
+  color: #918899;
+
+  font-size: 11px;
+}
+
+
+.occupancy-value {
+  color: #4b2675 !important;
+
+  font-size: 14px !important;
+
+  white-space: nowrap;
+}
+
+
+.occupancy-track {
+  width: 100%;
+
+  height: 10px;
+
+  background: #e8e4ec;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+
+.occupancy-fill {
+  height: 100%;
+
+  border-radius: 20px;
+
+  transition: width 0.7s ease;
+}
+
+
+/*
+   Los colores representan visualmente
+   el nivel relativo de ocupación.
+*/
+
+.channel-a {
+  background: #22c55e;
+}
+
+
+.channel-b {
+  background: #f59e0b;
+}
+
+
+.channel-c {
+  background: #ef4444;
+}
+
+
+.channel-d {
+  background: #f59e0b;
+}
+
+.occupancy-item:has(.channel-c) {
+  padding: 10px;
+
+  margin: -2px -10px;
+
+  border-radius: 10px;
+
+  background: #fff8f8;
+  width: auto;
+}
