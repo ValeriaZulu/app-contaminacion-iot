@@ -30,7 +30,15 @@ function HeatLayer({ puntos }) {
 }
 
 function HeatMap({ mediciones, canal, tipo }) {
-    let puntos;
+    let puntos = [];
+
+    if (tipo === "canal") {
+        puntos = mediciones.map((medicion) => [
+            medicion.latitud,
+            medicion.longitud,
+            medicion[`ocupacion_${canal}`] / 100,
+        ]);
+    }
 
     if (tipo === "temperatura") {
         const temperaturas = mediciones.map(
@@ -51,12 +59,29 @@ function HeatMap({ mediciones, canal, tipo }) {
                 intensidad,
             ];
         });
-    } else {
-        puntos = mediciones.map((medicion) => [
-            medicion.latitud,
-            medicion.longitud,
-            medicion[`ocupacion_${canal}`] / 100,
-        ]);
+    }
+
+    if (tipo === "frecuencia") {
+        const frecuencias = mediciones.map(
+            (medicion) =>
+                medicion.frecuencia_contaminada_representativa_MHz
+        );
+
+        const frecuenciaMin = Math.min(...frecuencias);
+        const frecuenciaMax = Math.max(...frecuencias);
+
+        puntos = mediciones.map((medicion) => {
+            const intensidad =
+                (medicion.frecuencia_contaminada_representativa_MHz -
+                    frecuenciaMin) /
+                (frecuenciaMax - frecuenciaMin);
+
+            return [
+                medicion.latitud,
+                medicion.longitud,
+                intensidad,
+            ];
+        });
     }
 
     return <HeatLayer puntos={puntos} />;

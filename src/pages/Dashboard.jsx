@@ -6,20 +6,18 @@ function Dashboard() {
     const [mediciones, setMediciones] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
-    const [canalSeleccionado, setCanalSeleccionado] = useState("A");
-    const [tipoHeatmap, setTipoHeatmap] = useState("canal");
+
+    const [canalSeleccionado, setCanalSeleccionado] =
+        useState("A");
+
+    const [tipoHeatmap, setTipoHeatmap] =
+        useState("canal");
 
     useEffect(() => {
         cargarMediciones()
-            .then((data) => {
-                setMediciones(data);
-            })
-            .catch((error) => {
-                setError(error.message);
-            })
-            .finally(() => {
-                setCargando(false);
-            });
+            .then((data) => setMediciones(data))
+            .catch((error) => setError(error.message))
+            .finally(() => setCargando(false));
     }, []);
 
     if (cargando) {
@@ -34,17 +32,29 @@ function Dashboard() {
         <main>
             <h1>Monitoreo de Ocupación del Espectro</h1>
 
-            <p>Mediciones cargadas: {mediciones.length}</p>
+            <p>
+                Mediciones cargadas: {mediciones.length}
+            </p>
 
             <div>
                 <h2>Variable del mapa</h2>
 
-                <button onClick={() => setTipoHeatmap("canal")}>
+                <button
+                    onClick={() => setTipoHeatmap("canal")}
+                >
                     Ocupación por canal
                 </button>
 
-                <button onClick={() => setTipoHeatmap("temperatura")}>
+                <button
+                    onClick={() => setTipoHeatmap("temperatura")}
+                >
                     Temperatura
+                </button>
+
+                <button
+                    onClick={() => setTipoHeatmap("frecuencia")}
+                >
+                    Frecuencia contaminada
                 </button>
             </div>
 
@@ -55,7 +65,9 @@ function Dashboard() {
                     {["A", "B", "C", "D"].map((canal) => (
                         <button
                             key={canal}
-                            onClick={() => setCanalSeleccionado(canal)}
+                            onClick={() =>
+                                setCanalSeleccionado(canal)
+                            }
                         >
                             Canal {canal}
                         </button>

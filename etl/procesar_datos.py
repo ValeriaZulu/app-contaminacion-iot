@@ -727,25 +727,87 @@ datos_dashboard['ocupacion_maxima'] = (
     .max(axis=1)
 )
 
-# Frecuencia de mayor potencia por medición
+# FRECUENCIA CONTAMINADA REPRESENTATIVA POR MEDICIÓN
+# Criterio de contaminación: potencia > -60 dBm
 
-# 1024 bins cubren 840-860 MHz
-frecuencias_mhz = np.linspace(840, 860, 1024, endpoint=False)
-
-# Índice del bin con mayor potencia en cada medición
-indice_pico = espectro.values.argmax(axis=1)
-
-# Frecuencia correspondiente al pico
-datos_dashboard['frecuencia_mas_potente_MHz'] = (
-    frecuencias_mhz[indice_pico]
+frecuencias_mhz = np.linspace(
+    840,
+    860,
+    1024,
+    endpoint=False
 )
 
-# Potencia correspondiente a ese pico
-datos_dashboard['potencia_pico_dBm'] = (
-    espectro.values[
-        np.arange(len(espectro)),
-        indice_pico
+espectro_valores = espectro.values
+
+frecuencia_contaminada = []
+potencia_contaminada = []
+
+for fila in espectro_valores:
+
+    # Bins que cumplen el criterio de contaminación
+    indices_contaminados = np.where(fila > -60)[0]
+
+    if len(indices_contaminados) == 0:
+        # Si la medición no tiene ningún bin contaminado
+        frecuencia_contaminada.append(np.nan)
+        potencia_contaminada.append(np.nan)
+
+    else:
+        # Entre los bins contaminados,
+        # seleccionar el de mayor potencia
+        indice_local = indices_contaminados[
+            np.argmax(fila[indices_contaminados])
+        ]
+
+        frecuencia_contaminada.append(
+            frecuencias_mhz[indice_local]
+        )
+
+        potencia_contaminada.append(
+            fila[indice_local]
+        )
+
+datos_dashboard[
+    'frecuencia_contaminada_representativa_MHz'
+] = frecuencia_contaminada
+
+datos_dashboard[
+    'potencia_frecuencia_contaminada_dBm'
+] = potencia_contaminada
+
+
+# FRECUENCIA MÁS CONTAMINADA DEL SISTEMA
+
+# Identificar los bins que superan el umbral de -60 dBm
+bins_contaminados = espectro_valores > -60
+
+porcentaje_contaminacion_frecuencia = (
+    bins_contaminados.mean(axis=0) * 100
+)
+
+indice_frecuencia_mas_contaminada = (
+    porcentaje_contaminacion_frecuencia.argmax()
+)
+
+frecuencia_mas_contaminada_sistema = (
+    frecuencias_mhz[indice_frecuencia_mas_contaminada]
+)
+
+porcentaje_mas_contaminada_sistema = (
+    porcentaje_contaminacion_frecuencia[
+        indice_frecuencia_mas_contaminada
     ]
+)
+
+print(
+    f"Frecuencia más contaminada del sistema: "
+    f"{frecuencia_mas_contaminada_sistema:.6f} MHz"
+)
+
+print(
+    f"Presencia de contaminación: "
+    f"{porcentaje_mas_contaminada_sistema:.2f}% "
+    f"de las mediciones"
 )
 
 # Revisar resultado

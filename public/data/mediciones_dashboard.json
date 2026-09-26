@@ -20,8 +20,8 @@
     "ocupacion_D":0.78125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":76.953125,
-    "frecuencia_mas_potente_MHz":852.55859375,
-    "potencia_pico_dBm":-26.675437852
+    "frecuencia_contaminada_representativa_MHz":852.55859375,
+    "potencia_frecuencia_contaminada_dBm":-26.675437852
   },
   {
     "medicion":2,
@@ -44,8 +44,8 @@
     "ocupacion_D":9.375,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":78.90625,
-    "frecuencia_mas_potente_MHz":853.10546875,
-    "potencia_pico_dBm":-26.1055625385
+    "frecuencia_contaminada_representativa_MHz":853.10546875,
+    "potencia_frecuencia_contaminada_dBm":-26.1055625385
   },
   {
     "medicion":3,
@@ -68,8 +68,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":37.890625,
-    "frecuencia_mas_potente_MHz":853.14453125,
-    "potencia_pico_dBm":-26.3795857852
+    "frecuencia_contaminada_representativa_MHz":853.14453125,
+    "potencia_frecuencia_contaminada_dBm":-26.3795857852
   },
   {
     "medicion":4,
@@ -92,8 +92,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":6.25,
-    "frecuencia_mas_potente_MHz":851.953125,
-    "potencia_pico_dBm":-47.7821959385
+    "frecuencia_contaminada_representativa_MHz":851.953125,
+    "potencia_frecuencia_contaminada_dBm":-47.7821959385
   },
   {
     "medicion":5,
@@ -116,8 +116,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":7.8125,
-    "frecuencia_mas_potente_MHz":852.890625,
-    "potencia_pico_dBm":-49.0091074334
+    "frecuencia_contaminada_representativa_MHz":852.890625,
+    "potencia_frecuencia_contaminada_dBm":-49.0091074334
   },
   {
     "medicion":6,
@@ -140,8 +140,8 @@
     "ocupacion_D":1.5625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":52.734375,
-    "frecuencia_mas_potente_MHz":853.125,
-    "potencia_pico_dBm":-40.6688403942
+    "frecuencia_contaminada_representativa_MHz":853.125,
+    "potencia_frecuencia_contaminada_dBm":-40.6688403942
   },
   {
     "medicion":7,
@@ -164,8 +164,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":7.421875,
-    "frecuencia_mas_potente_MHz":852.890625,
-    "potencia_pico_dBm":-42.7853563886
+    "frecuencia_contaminada_representativa_MHz":852.890625,
+    "potencia_frecuencia_contaminada_dBm":-42.7853563886
   },
   {
     "medicion":8,
@@ -188,8 +188,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":1.171875,
-    "frecuencia_mas_potente_MHz":851.4453125,
-    "potencia_pico_dBm":-54.3006785607
+    "frecuencia_contaminada_representativa_MHz":851.4453125,
+    "potencia_frecuencia_contaminada_dBm":-54.3006785607
   },
   {
     "medicion":9,
@@ -212,8 +212,8 @@
     "ocupacion_D":16.796875,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":37.109375,
-    "frecuencia_mas_potente_MHz":846.7578125,
-    "potencia_pico_dBm":-15.3328606825
+    "frecuencia_contaminada_representativa_MHz":846.7578125,
+    "potencia_frecuencia_contaminada_dBm":-15.3328606825
   },
   {
     "medicion":10,
@@ -236,8 +236,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":5.078125,
-    "frecuencia_mas_potente_MHz":851.5625,
-    "potencia_pico_dBm":-48.873463114
+    "frecuencia_contaminada_representativa_MHz":851.5625,
+    "potencia_frecuencia_contaminada_dBm":-48.873463114
   },
   {
     "medicion":11,
@@ -260,8 +260,8 @@
     "ocupacion_D":0.78125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":8.984375,
-    "frecuencia_mas_potente_MHz":851.5625,
-    "potencia_pico_dBm":-47.227063619
+    "frecuencia_contaminada_representativa_MHz":851.5625,
+    "potencia_frecuencia_contaminada_dBm":-47.227063619
   },
   {
     "medicion":12,
@@ -284,8 +284,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":0.78125,
-    "frecuencia_mas_potente_MHz":850.0,
-    "potencia_pico_dBm":-57.449888148
+    "frecuencia_contaminada_representativa_MHz":850.0,
+    "potencia_frecuencia_contaminada_dBm":-57.449888148
   },
   {
     "medicion":13,
@@ -308,8 +308,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":9.375,
-    "frecuencia_mas_potente_MHz":851.54296875,
-    "potencia_pico_dBm":-50.3277135049
+    "frecuencia_contaminada_representativa_MHz":851.54296875,
+    "potencia_frecuencia_contaminada_dBm":-50.3277135049
   },
   {
     "medicion":14,
@@ -332,8 +332,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":6.25,
-    "frecuencia_mas_potente_MHz":851.11328125,
-    "potencia_pico_dBm":-38.7100036269
+    "frecuencia_contaminada_representativa_MHz":851.11328125,
+    "potencia_frecuencia_contaminada_dBm":-38.7100036269
   },
   {
     "medicion":15,
@@ -356,8 +356,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":25.78125,
-    "frecuencia_mas_potente_MHz":852.28515625,
-    "potencia_pico_dBm":-32.0661181778
+    "frecuencia_contaminada_representativa_MHz":852.28515625,
+    "potencia_frecuencia_contaminada_dBm":-32.0661181778
   },
   {
     "medicion":16,
@@ -380,8 +380,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"A",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":851.71875,
-    "potencia_pico_dBm":-3.63923985
+    "frecuencia_contaminada_representativa_MHz":851.71875,
+    "potencia_frecuencia_contaminada_dBm":-3.63923985
   },
   {
     "medicion":17,
@@ -404,8 +404,8 @@
     "ocupacion_D":8.203125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":83.203125,
-    "frecuencia_mas_potente_MHz":852.79296875,
-    "potencia_pico_dBm":-17.2224862676
+    "frecuencia_contaminada_representativa_MHz":852.79296875,
+    "potencia_frecuencia_contaminada_dBm":-17.2224862676
   },
   {
     "medicion":18,
@@ -428,8 +428,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":847.40234375,
-    "potencia_pico_dBm":-16.0467144114
+    "frecuencia_contaminada_representativa_MHz":847.40234375,
+    "potencia_frecuencia_contaminada_dBm":-16.0467144114
   },
   {
     "medicion":19,
@@ -452,8 +452,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":13.28125,
-    "frecuencia_mas_potente_MHz":851.2890625,
-    "potencia_pico_dBm":-39.5531611549
+    "frecuencia_contaminada_representativa_MHz":851.2890625,
+    "potencia_frecuencia_contaminada_dBm":-39.5531611549
   },
   {
     "medicion":20,
@@ -476,8 +476,8 @@
     "ocupacion_D":49.609375,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":847.16796875,
-    "potencia_pico_dBm":-10.7287425978
+    "frecuencia_contaminada_representativa_MHz":847.16796875,
+    "potencia_frecuencia_contaminada_dBm":-10.7287425978
   },
   {
     "medicion":21,
@@ -500,8 +500,8 @@
     "ocupacion_D":4.296875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":79.6875,
-    "frecuencia_mas_potente_MHz":851.2109375,
-    "potencia_pico_dBm":-33.1180448745
+    "frecuencia_contaminada_representativa_MHz":851.2109375,
+    "potencia_frecuencia_contaminada_dBm":-33.1180448745
   },
   {
     "medicion":22,
@@ -524,8 +524,8 @@
     "ocupacion_D":98.046875,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":852.44140625,
-    "potencia_pico_dBm":-23.6016704551
+    "frecuencia_contaminada_representativa_MHz":852.44140625,
+    "potencia_frecuencia_contaminada_dBm":-23.6016704551
   },
   {
     "medicion":23,
@@ -548,8 +548,8 @@
     "ocupacion_D":67.578125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":853.2421875,
-    "potencia_pico_dBm":-16.4935038111
+    "frecuencia_contaminada_representativa_MHz":853.2421875,
+    "potencia_frecuencia_contaminada_dBm":-16.4935038111
   },
   {
     "medicion":24,
@@ -572,8 +572,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":848.61328125,
-    "potencia_pico_dBm":-9.8971216027
+    "frecuencia_contaminada_representativa_MHz":848.61328125,
+    "potencia_frecuencia_contaminada_dBm":-9.8971216027
   },
   {
     "medicion":25,
@@ -596,8 +596,8 @@
     "ocupacion_D":99.609375,
     "canal_mas_contaminado":"A",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":852.1875,
-    "potencia_pico_dBm":-15.987087462
+    "frecuencia_contaminada_representativa_MHz":852.1875,
+    "potencia_frecuencia_contaminada_dBm":-15.987087462
   },
   {
     "medicion":26,
@@ -620,8 +620,8 @@
     "ocupacion_D":0.390625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":56.25,
-    "frecuencia_mas_potente_MHz":853.06640625,
-    "potencia_pico_dBm":-30.731907571
+    "frecuencia_contaminada_representativa_MHz":853.06640625,
+    "potencia_frecuencia_contaminada_dBm":-30.731907571
   },
   {
     "medicion":27,
@@ -644,8 +644,8 @@
     "ocupacion_D":0.390625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":25.78125,
-    "frecuencia_mas_potente_MHz":853.046875,
-    "potencia_pico_dBm":-36.6998668635
+    "frecuencia_contaminada_representativa_MHz":853.046875,
+    "potencia_frecuencia_contaminada_dBm":-36.6998668635
   },
   {
     "medicion":28,
@@ -668,8 +668,8 @@
     "ocupacion_D":67.1875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":99.609375,
-    "frecuencia_mas_potente_MHz":846.81640625,
-    "potencia_pico_dBm":-11.8492610202
+    "frecuencia_contaminada_representativa_MHz":846.81640625,
+    "potencia_frecuencia_contaminada_dBm":-11.8492610202
   },
   {
     "medicion":29,
@@ -692,8 +692,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"D",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":852.5390625,
-    "potencia_pico_dBm":-29.0260628008
+    "frecuencia_contaminada_representativa_MHz":852.5390625,
+    "potencia_frecuencia_contaminada_dBm":-29.0260628008
   },
   {
     "medicion":30,
@@ -716,8 +716,8 @@
     "ocupacion_D":4.296875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":79.296875,
-    "frecuencia_mas_potente_MHz":852.3046875,
-    "potencia_pico_dBm":-40.1571227564
+    "frecuencia_contaminada_representativa_MHz":852.3046875,
+    "potencia_frecuencia_contaminada_dBm":-40.1571227564
   },
   {
     "medicion":31,
@@ -740,8 +740,8 @@
     "ocupacion_D":72.65625,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":847.2265625,
-    "potencia_pico_dBm":-12.7826139633
+    "frecuencia_contaminada_representativa_MHz":847.2265625,
+    "potencia_frecuencia_contaminada_dBm":-12.7826139633
   },
   {
     "medicion":32,
@@ -764,8 +764,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":8.203125,
-    "frecuencia_mas_potente_MHz":853.1640625,
-    "potencia_pico_dBm":-40.8572474043
+    "frecuencia_contaminada_representativa_MHz":853.1640625,
+    "potencia_frecuencia_contaminada_dBm":-40.8572474043
   },
   {
     "medicion":33,
@@ -788,8 +788,8 @@
     "ocupacion_D":16.796875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":91.015625,
-    "frecuencia_mas_potente_MHz":847.40234375,
-    "potencia_pico_dBm":-18.7643311482
+    "frecuencia_contaminada_representativa_MHz":847.40234375,
+    "potencia_frecuencia_contaminada_dBm":-18.7643311482
   },
   {
     "medicion":34,
@@ -812,8 +812,8 @@
     "ocupacion_D":67.1875,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":99.609375,
-    "frecuencia_mas_potente_MHz":846.9921875,
-    "potencia_pico_dBm":-9.8803970586
+    "frecuencia_contaminada_representativa_MHz":846.9921875,
+    "potencia_frecuencia_contaminada_dBm":-9.8803970586
   },
   {
     "medicion":35,
@@ -836,8 +836,8 @@
     "ocupacion_D":39.453125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":92.96875,
-    "frecuencia_mas_potente_MHz":851.3671875,
-    "potencia_pico_dBm":-32.4895847656
+    "frecuencia_contaminada_representativa_MHz":851.3671875,
+    "potencia_frecuencia_contaminada_dBm":-32.4895847656
   },
   {
     "medicion":36,
@@ -860,8 +860,8 @@
     "ocupacion_D":39.0625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":96.484375,
-    "frecuencia_mas_potente_MHz":851.46484375,
-    "potencia_pico_dBm":-20.360979212
+    "frecuencia_contaminada_representativa_MHz":851.46484375,
+    "potencia_frecuencia_contaminada_dBm":-20.360979212
   },
   {
     "medicion":37,
@@ -884,8 +884,8 @@
     "ocupacion_D":6.640625,
     "canal_mas_contaminado":"A",
     "ocupacion_maxima":74.21875,
-    "frecuencia_mas_potente_MHz":842.32421875,
-    "potencia_pico_dBm":-37.8938765006
+    "frecuencia_contaminada_representativa_MHz":842.32421875,
+    "potencia_frecuencia_contaminada_dBm":-37.8938765006
   },
   {
     "medicion":38,
@@ -908,8 +908,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":60.546875,
-    "frecuencia_mas_potente_MHz":851.30859375,
-    "potencia_pico_dBm":-38.1279190254
+    "frecuencia_contaminada_representativa_MHz":851.30859375,
+    "potencia_frecuencia_contaminada_dBm":-38.1279190254
   },
   {
     "medicion":39,
@@ -932,8 +932,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":34.375,
-    "frecuencia_mas_potente_MHz":851.2890625,
-    "potencia_pico_dBm":-26.2303129007
+    "frecuencia_contaminada_representativa_MHz":851.2890625,
+    "potencia_frecuencia_contaminada_dBm":-26.2303129007
   },
   {
     "medicion":40,
@@ -956,8 +956,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":33.984375,
-    "frecuencia_mas_potente_MHz":851.2890625,
-    "potencia_pico_dBm":-30.1142116477
+    "frecuencia_contaminada_representativa_MHz":851.2890625,
+    "potencia_frecuencia_contaminada_dBm":-30.1142116477
   },
   {
     "medicion":41,
@@ -980,8 +980,8 @@
     "ocupacion_D":3.515625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":52.34375,
-    "frecuencia_mas_potente_MHz":853.28125,
-    "potencia_pico_dBm":-41.4203470302
+    "frecuencia_contaminada_representativa_MHz":853.28125,
+    "potencia_frecuencia_contaminada_dBm":-41.4203470302
   },
   {
     "medicion":42,
@@ -1004,8 +1004,8 @@
     "ocupacion_D":0.390625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":69.53125,
-    "frecuencia_mas_potente_MHz":852.08984375,
-    "potencia_pico_dBm":-38.9329348622
+    "frecuencia_contaminada_representativa_MHz":852.08984375,
+    "potencia_frecuencia_contaminada_dBm":-38.9329348622
   },
   {
     "medicion":43,
@@ -1028,8 +1028,8 @@
     "ocupacion_D":1.171875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":48.046875,
-    "frecuencia_mas_potente_MHz":851.42578125,
-    "potencia_pico_dBm":-40.3344127845
+    "frecuencia_contaminada_representativa_MHz":851.42578125,
+    "potencia_frecuencia_contaminada_dBm":-40.3344127845
   },
   {
     "medicion":44,
@@ -1052,8 +1052,8 @@
     "ocupacion_D":25.390625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":88.28125,
-    "frecuencia_mas_potente_MHz":851.73828125,
-    "potencia_pico_dBm":-36.697247453
+    "frecuencia_contaminada_representativa_MHz":851.73828125,
+    "potencia_frecuencia_contaminada_dBm":-36.697247453
   },
   {
     "medicion":45,
@@ -1076,8 +1076,8 @@
     "ocupacion_D":50.0,
     "canal_mas_contaminado":"B",
     "ocupacion_maxima":73.828125,
-    "frecuencia_mas_potente_MHz":846.953125,
-    "potencia_pico_dBm":-11.8147948932
+    "frecuencia_contaminada_representativa_MHz":846.953125,
+    "potencia_frecuencia_contaminada_dBm":-11.8147948932
   },
   {
     "medicion":46,
@@ -1100,8 +1100,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":26.171875,
-    "frecuencia_mas_potente_MHz":852.91015625,
-    "potencia_pico_dBm":-34.1594296802
+    "frecuencia_contaminada_representativa_MHz":852.91015625,
+    "potencia_frecuencia_contaminada_dBm":-34.1594296802
   },
   {
     "medicion":47,
@@ -1124,8 +1124,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":20.3125,
-    "frecuencia_mas_potente_MHz":851.93359375,
-    "potencia_pico_dBm":-38.7865486694
+    "frecuencia_contaminada_representativa_MHz":851.93359375,
+    "potencia_frecuencia_contaminada_dBm":-38.7865486694
   },
   {
     "medicion":48,
@@ -1148,8 +1148,8 @@
     "ocupacion_D":1.171875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":85.9375,
-    "frecuencia_mas_potente_MHz":852.48046875,
-    "potencia_pico_dBm":-34.3468089116
+    "frecuencia_contaminada_representativa_MHz":852.48046875,
+    "potencia_frecuencia_contaminada_dBm":-34.3468089116
   },
   {
     "medicion":49,
@@ -1172,8 +1172,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":42.96875,
-    "frecuencia_mas_potente_MHz":851.38671875,
-    "potencia_pico_dBm":-24.8091449142
+    "frecuencia_contaminada_representativa_MHz":851.38671875,
+    "potencia_frecuencia_contaminada_dBm":-24.8091449142
   },
   {
     "medicion":50,
@@ -1196,8 +1196,8 @@
     "ocupacion_D":5.078125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":78.515625,
-    "frecuencia_mas_potente_MHz":851.89453125,
-    "potencia_pico_dBm":-32.9243434215
+    "frecuencia_contaminada_representativa_MHz":851.89453125,
+    "potencia_frecuencia_contaminada_dBm":-32.9243434215
   },
   {
     "medicion":51,
@@ -1220,8 +1220,8 @@
     "ocupacion_D":1.171875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":41.015625,
-    "frecuencia_mas_potente_MHz":851.93359375,
-    "potencia_pico_dBm":-44.7774263901
+    "frecuencia_contaminada_representativa_MHz":851.93359375,
+    "potencia_frecuencia_contaminada_dBm":-44.7774263901
   },
   {
     "medicion":52,
@@ -1244,8 +1244,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"A",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":852.6171875,
-    "potencia_pico_dBm":-26.5943259756
+    "frecuencia_contaminada_representativa_MHz":852.6171875,
+    "potencia_frecuencia_contaminada_dBm":-26.5943259756
   },
   {
     "medicion":53,
@@ -1268,8 +1268,8 @@
     "ocupacion_D":0.78125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":44.140625,
-    "frecuencia_mas_potente_MHz":853.2421875,
-    "potencia_pico_dBm":-41.4406366882
+    "frecuencia_contaminada_representativa_MHz":853.2421875,
+    "potencia_frecuencia_contaminada_dBm":-41.4406366882
   },
   {
     "medicion":54,
@@ -1292,8 +1292,8 @@
     "ocupacion_D":2.34375,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":77.734375,
-    "frecuencia_mas_potente_MHz":851.23046875,
-    "potencia_pico_dBm":-37.7587980554
+    "frecuencia_contaminada_representativa_MHz":851.23046875,
+    "potencia_frecuencia_contaminada_dBm":-37.7587980554
   },
   {
     "medicion":55,
@@ -1316,8 +1316,8 @@
     "ocupacion_D":0.390625,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":75.390625,
-    "frecuencia_mas_potente_MHz":853.2421875,
-    "potencia_pico_dBm":-26.8105816041
+    "frecuencia_contaminada_representativa_MHz":853.2421875,
+    "potencia_frecuencia_contaminada_dBm":-26.8105816041
   },
   {
     "medicion":56,
@@ -1340,8 +1340,8 @@
     "ocupacion_D":67.96875,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":97.265625,
-    "frecuencia_mas_potente_MHz":853.06640625,
-    "potencia_pico_dBm":-24.9668149581
+    "frecuencia_contaminada_representativa_MHz":853.06640625,
+    "potencia_frecuencia_contaminada_dBm":-24.9668149581
   },
   {
     "medicion":57,
@@ -1364,8 +1364,8 @@
     "ocupacion_D":100.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":853.0859375,
-    "potencia_pico_dBm":-28.4013578586
+    "frecuencia_contaminada_representativa_MHz":853.0859375,
+    "potencia_frecuencia_contaminada_dBm":-28.4013578586
   },
   {
     "medicion":58,
@@ -1388,8 +1388,8 @@
     "ocupacion_D":0.0,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":25.0,
-    "frecuencia_mas_potente_MHz":852.55859375,
-    "potencia_pico_dBm":-37.4004985978
+    "frecuencia_contaminada_representativa_MHz":852.55859375,
+    "potencia_frecuencia_contaminada_dBm":-37.4004985978
   },
   {
     "medicion":59,
@@ -1412,8 +1412,8 @@
     "ocupacion_D":2.34375,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":74.609375,
-    "frecuencia_mas_potente_MHz":852.578125,
-    "potencia_pico_dBm":-32.2054664682
+    "frecuencia_contaminada_representativa_MHz":852.578125,
+    "potencia_frecuencia_contaminada_dBm":-32.2054664682
   },
   {
     "medicion":60,
@@ -1436,8 +1436,8 @@
     "ocupacion_D":57.03125,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":100.0,
-    "frecuencia_mas_potente_MHz":852.5,
-    "potencia_pico_dBm":-37.3242350223
+    "frecuencia_contaminada_representativa_MHz":852.5,
+    "potencia_frecuencia_contaminada_dBm":-37.3242350223
   },
   {
     "medicion":61,
@@ -1460,7 +1460,7 @@
     "ocupacion_D":62.5,
     "canal_mas_contaminado":"C",
     "ocupacion_maxima":99.609375,
-    "frecuencia_mas_potente_MHz":853.0078125,
-    "potencia_pico_dBm":-31.4113014942
+    "frecuencia_contaminada_representativa_MHz":853.0078125,
+    "potencia_frecuencia_contaminada_dBm":-31.4113014942
   }
 ]
