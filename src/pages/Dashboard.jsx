@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { cargarMediciones } from "../data/dataService";
+
+import Header from "../components/Header";
+import SummaryCards from "../components/SummaryCards";
+import AnalysisSelector from "../components/AnalysisSelector";
 import MeasurementMap from "../components/MeasurementMap";
 
 function Dashboard() {
@@ -7,11 +11,8 @@ function Dashboard() {
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
 
-    const [canalSeleccionado, setCanalSeleccionado] =
-        useState("A");
-
-    const [tipoHeatmap, setTipoHeatmap] =
-        useState("canal");
+    const [canalSeleccionado, setCanalSeleccionado] = useState("A");
+    const [tipoHeatmap, setTipoHeatmap] = useState("canal");
 
     useEffect(() => {
         cargarMediciones()
@@ -29,58 +30,44 @@ function Dashboard() {
     }
 
     return (
-        <main>
-            <h1>Monitoreo de Ocupación del Espectro</h1>
+        <>
+            <Header />
 
-            <p>
-                Mediciones cargadas: {mediciones.length}
-            </p>
+            <main>
+                <SummaryCards mediciones={mediciones} />
 
-            <div>
-                <h2>Variable del mapa</h2>
+                <AnalysisSelector
+                    tipoHeatmap={tipoHeatmap}
+                    setTipoHeatmap={setTipoHeatmap}
+                />
 
-                <button
-                    onClick={() => setTipoHeatmap("canal")}
-                >
-                    Ocupación por canal
-                </button>
+                {tipoHeatmap === "canal" && (
+                    <div className="channel-selector">
+                        <h3>Canal seleccionado</h3>
 
-                <button
-                    onClick={() => setTipoHeatmap("temperatura")}
-                >
-                    Temperatura
-                </button>
+                        {["A", "B", "C", "D"].map((canal) => (
+                            <button
+                                key={canal}
+                                onClick={() => setCanalSeleccionado(canal)}
+                                className={
+                                    canalSeleccionado === canal
+                                        ? "channel-active"
+                                        : ""
+                                }
+                            >
+                                Canal {canal}
+                            </button>
+                        ))}
+                    </div>
+                )}
 
-                <button
-                    onClick={() => setTipoHeatmap("frecuencia")}
-                >
-                    Frecuencia contaminada
-                </button>
-            </div>
-
-            {tipoHeatmap === "canal" && (
-                <div>
-                    <h3>Canal seleccionado</h3>
-
-                    {["A", "B", "C", "D"].map((canal) => (
-                        <button
-                            key={canal}
-                            onClick={() =>
-                                setCanalSeleccionado(canal)
-                            }
-                        >
-                            Canal {canal}
-                        </button>
-                    ))}
-                </div>
-            )}
-
-            <MeasurementMap
-                mediciones={mediciones}
-                canalSeleccionado={canalSeleccionado}
-                tipoHeatmap={tipoHeatmap}
-            />
-        </main>
+                <MeasurementMap
+                    mediciones={mediciones}
+                    canalSeleccionado={canalSeleccionado}
+                    tipoHeatmap={tipoHeatmap}
+                />
+            </main>
+        </>
     );
 }
 
